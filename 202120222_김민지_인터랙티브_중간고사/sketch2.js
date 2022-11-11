@@ -236,9 +236,19 @@ function mousePressed() {
 
   // let newRect = new Obj(mouseX, mouseY, size, size, randColor);
   if (mouseButton === CENTER) {
-    newRect = new Obj(mouseX, mouseY, size, size, randColor);
+    newRect = new Obj(mouseX, mouseY, size, size, randColor, {
+      restitution: 1,
+      friction: 0,
+      frictionAir: 0,
+      frictionStatic: 0,
+    });
   } else if (mouseButton === RIGHT) {
-    newRect = new Circle(mouseX, mouseY, size, randColor);
+    newRect = new Circle(mouseX, mouseY, size, randColor, {
+      restitution: 1,
+      friction: 0,
+      frictionAir: 0,
+      frictionStatic: 0,
+    });
   }
   Composite.add(engine.world, newRect.body);
   boxes.push(newRect);

@@ -2,7 +2,7 @@ class Circle {
   constructor(x, y, radius, color, options) {
     this.radius = radius;
     this.color = color;
-    this.body = Matter.Bodies.circle(x, y, this.radius, color, options);
+    this.body = Matter.Bodies.circle(x, y, this.radius, options);
     Composite.add(engine.world, this.body);
   }
   renderBody() {
