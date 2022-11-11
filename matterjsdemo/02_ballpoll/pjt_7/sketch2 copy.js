@@ -119,14 +119,22 @@ window.addEventListener("deviceorientation", (e) => {
 });
 
 class Obj {
-  constructor(x, y, w, h, c, opt) {
-    this.x = x;
-    this.y = y;
-    this.width = w;
-    this.height = h;
+  constructor(a, b, c, d, e, f) {
+    this.x = c;
+    this.y = d;
+    this.width = a;
+    this.height = b;
     this.c = c;
-    this.body = Bodies.rectangle(this.x, this.y, this.width, this.height, opt);
+    this.body = Bodies.rectangle(this.y, this.y, this.width, this.height, opt);
   }
+  // constructor(x, y, w, h, c, opt) {
+  //   this.x = x;
+  //   this.y = y;
+  //   this.width = w;
+  //   this.height = h;
+  //   this.c = c;
+  //   this.body = Bodies.rectangle(this.x, this.y, this.width, this.height, opt);
+  // }
 
   renderBody() {
     push();

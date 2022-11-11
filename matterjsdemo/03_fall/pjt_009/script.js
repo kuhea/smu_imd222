@@ -28,7 +28,7 @@ function mousePressed() {
   let randColor = color(random(256), random(256), random(256));
   let newRect;
   if (mouseButton === LEFT) {
-    newRect = new Circle(mouseX, mouseY, size, size, randColor);
+    newRect = new Circle(mouseX, mouseY, size, randColor);
   } else if (mouseButton === CENTER) {
     newRect = new Rect(mouseX, mouseY, size, size, randColor);
   } else if (mouseButton === RIGHT) {
@@ -47,7 +47,7 @@ function mouseDragged() {
   if (mouseButton === LEFT) {
     newFloor = new Rect(mouseX, mouseY, size, size, randColor);
   } else if (mouseButton === CENTER) {
-    newFloor = new Circle(mouseX, mouseY, size, size, randColor);
+    newFloor = new Circle(mouseX, mouseY, size, randColor);
   }
   // else if (mouseButton === RIGHT) {
   //   newRect = new Rect(mouseX, mouseY, size, size, randColor);
